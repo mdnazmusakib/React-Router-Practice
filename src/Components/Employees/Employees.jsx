@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { data, useLoaderData, Link } from 'react-router-dom';
+import { data, useLoaderData, Link, useNavigate } from 'react-router-dom';
 import './Employees.css'
 function Employees() {
 
@@ -14,6 +14,7 @@ function Employees() {
     // },[])
     const employees = useLoaderData()
     // console.log(employees)
+    const navigate = useNavigate()
 
   return (
     <div>
@@ -26,9 +27,11 @@ function Employees() {
                         <div className='employee' key={employee.id}>
                             <h1>Name : {employee.name}</h1>
                             <p>E-mail : {employee.email}</p>
-                            <Link to = {`${employee.id}`}>
+                            {/* <Link to = {`${employee.id}`}>
                                 <button>Show Details</button>
-                            </Link>
+                            </Link> */}
+
+                            <button onClick={()=> navigate("/employees/"+employee.id)}>Show Details</button>
                         </div>
                     )
                 })
