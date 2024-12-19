@@ -1,0 +1,14 @@
+.employee-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+}
+
+.employee{
+    /* display: flex;
+    justify-content: center; */
+    align-items: center;
+    border: 1px solid black;
+    
+    /* background-color: red; */
+}
