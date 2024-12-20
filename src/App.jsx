@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { Outlet,Link } from "react-router-dom";
+import { Outlet,Link,NavLink } from "react-router-dom";
 import './App.css'
+import { IoIosContacts } from "react-icons/io";
 
 function App() {
 
@@ -11,18 +12,26 @@ function App() {
         <ul>
           <li>
             {/* <a href="/">Home</a> */}
-            <Link to="">Home</Link>
+            {/* <Link to="">Home</Link> */}
+            <NavLink to="">Home</NavLink>
           </li>
           <li>
             {/* <a href="/about">About</a> */}
-            <Link to="about">About</Link>
+            {/* <Link to="about">About</Link> */}
+            <NavLink to="about">About</NavLink>
+
           </li>
           <li>
             {/* <a href="/contact">Contact Us</a> */}
-            <Link to="contact">Contact</Link>
+            {/* <Link to="contact">Contact</Link> */}
+            <NavLink to="contact"><IoIosContacts />Contact</NavLink>
+
           </li>
           <li>
-            <Link to="employees">Employees</Link>
+            {/* <Link to="employees">Employees</Link> */}
+            <NavLink to="employees">Employees</NavLink>
+            {/* <Link to="employees">Employees</Link> */}
+
           </li>
         </ul>
 
